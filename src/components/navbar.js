@@ -3,7 +3,7 @@ const Navbar = ({ view, setView }) => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
-      <div className="container-fluid">
+      <div className="container">
         <a className="navbar-brand" href="#">Repo Search</a>
           <ul className="navbar-nav">
             <li className="nav-item">
