@@ -1,10 +1,13 @@
 import Button from './button'
 import Input from './input'
-import Row from './row'
 
-const SearchForm = () => {
+const SearchForm = ({term, setTerm, handleSubmit}) => {
     return (
-        <form>
+        <form onSubmit={event => {
+        event.preventDefault()
+        handleSubmit()
+    }}>
+        <div className="input-group input-group-lg">
             <Input
             value={term}
             onChange={event => setTerm(event.target.value)}
@@ -13,7 +16,9 @@ const SearchForm = () => {
             placeholder="Search repos by keyword"
             keyword="Search"
             />
-            <Button>Search</Button>
+            <Button disabled={!term}>Search</Button>
+        </div>
+            
         </form>
     )
 }

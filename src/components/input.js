@@ -1,5 +1,5 @@
 const Input = props => {
-  return <input>{...props}</input>
+  return <input {...props} />
 }
 
 export default Input
